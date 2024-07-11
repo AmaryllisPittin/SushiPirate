@@ -1,0 +1,78 @@
+/******************RESPONSIVE VALUES*********************/
+
+$tablet-breakpoint: 1024px;
+$mobile-breakpoint: 768px;
+
+/*********DISPLAY VALUES*****************/
+
+$center-value: center;
+
+@mixin flex-and-row {
+    display:flex;
+    flex-direction:row;
+}
+
+@mixin flex-and-column {
+    display:flex;
+    flex-direction:column;
+}
+
+/********DISPLAY************************/
+
+.topbar,
+.banner-title,
+.banner-welcome__buttons {
+    @include flex-and-row;
+}
+
+.banner-welcome {
+    @include flex-and-column;
+}
+
+.banner-title,
+.banner-welcome__h2 {
+    position:absolute;
+    z-index:5;
+}
+
+.topbar-container {
+    @include flex-and-row;
+    @media all and (max-width: $mobile-breakpoint) {
+        @include flex-and-column;   
+    }
+}
+
+.topbar-container {
+    position: fixed;
+    flex-wrap:wrap;
+}
+
+.topbar {
+    justify-content: space-around;
+    flex-grow:1;
+    @media (max-width: 768px) {
+        justify-content: space-between;
+    }
+}
+
+.hide-on-mobile {
+    @media (max-width: 768px) {
+        display:none;
+    }
+}
+
+.burger-menu {
+    display:none;
+    @media (max-width: 768px) {
+        display:block;
+    }
+}
+
+.banner-title,
+.banner-welcome {
+    align-items: $center-value;
+}
+
+.banner-title {
+    justify-content: $center-value;
+}

@@ -1,0 +1,79 @@
+/******************RESPONSIVE VALUES*********************/
+
+$tablet-breakpoint: 1024px;
+$mobile-breakpoint: 768px;
+
+/*********************************************************/
+
+
+* {
+    margin:0;
+}
+
+.topbar-container {
+    width:100%;
+    padding-left:0;
+    padding-top:20px;
+    padding-bottom:20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.topbar {
+    padding-left:0;
+    background-color:rgb(20,20,20);
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+.banner {
+    width:100%;
+}
+
+.banner-title {
+    padding-top:15%;
+    width:100%;
+    @media all and (max-width: $mobile-breakpoint) {
+        padding-top:25%;
+    }
+    &__h1 {
+        padding-right:3%;
+    }
+    &__logo {
+        width:270px;
+        height:270px;
+        border-radius:50%;
+        z-index:10;
+        @media all and (max-width: $tablet-breakpoint) {
+            width:200px;
+            height:200px;
+        }
+        @media all and (max-width: $mobile-breakpoint) {
+            width:70px;
+            height:70px;
+        }
+    }
+}
+
+.banner-welcome {
+    &__buttons {
+        margin-top:25px;
+        margin-bottom:300px;
+        @media all and (max-width: $mobile-breakpoint) {
+           margin-bottom: 150px;
+        }
+    }
+    &__h2 {
+        top: 800px;
+        font-size: 30px;
+        width:44%;
+        @media all and (max-width: $mobile-breakpoint) {
+        font-size:18px;
+        }
+    }
+    &__img {
+        width:100%;
+    }
+}

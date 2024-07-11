@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
+import './sass/mainStyle.scss';
+import './sass/merging.scss';
+import './sass/dimensions-spacing.scss';
+import './sass/animations.scss';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

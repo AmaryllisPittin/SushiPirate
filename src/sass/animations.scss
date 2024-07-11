@@ -1,0 +1,34 @@
+
+
+/*************************************/
+
+.topbar-link,
+.download-link {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .topbar-link:before, .topbar-link:after,
+  .dropdown-link:before, .dropdown-link:after,
+  .download-link:before, .download-link:after {
+    content: '';
+    border-bottom: solid 1px #ffe661;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  
+  .topbar-link:before { left: 0; }
+  .topbar-link:after { right: 0; }
+  .dropdown-link:before { left: 0; }
+  .dropdown-link:after { right: 0; }
+  .download-link:before { left: 0; }
+  .download-link:after { right: 0; }
+  
+  .topbar-link:hover:before, .topbar-link:hover:after,
+  .dropdown-link:hover:before, .dropdown-link:hover:after,
+  .download-link:hover:before, .download-link:hover:after {
+    width: 50%;
+  }
